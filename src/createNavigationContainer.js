@@ -85,7 +85,7 @@ export default function createNavigationContainer(Component) {
             // dispatch returns true if the action results in a state change,
             // and false otherwise. This maps well to what BackHandler expects
             // from a callback -- true if handled, false if not handled
-            
+
             // TODO: Edit by zyl
             // return this.dispatch(NavigationActions.back());
           }
@@ -187,20 +187,20 @@ export default function createNavigationContainer(Component) {
       if (!this._isStateful()) {
         return;
       }
-
-      if (__DEV__ && !this.props.detached) {
-        if (_statefulContainerCount > 0) {
-          // Temporarily only show this on iOS due to this issue:
-          // https://github.com/react-navigation/react-navigation/issues/4196#issuecomment-390827829
-          if (Platform.OS === 'ios') {
-            console.warn(
-              `You should only render one navigator explicitly in your app, and other navigators should by rendered by including them in that navigator. Full details at: ${docsUrl(
-                'common-mistakes.html#explicitly-rendering-more-than-one-navigator'
-              )}`
-            );
-          }
-        }
-      }
+      // TODO: Edit by zyl
+      // if (__DEV__ && !this.props.detached) {
+      //   if (_statefulContainerCount > 0) {
+      //     // Temporarily only show this on iOS due to this issue:
+      //     // https://github.com/react-navigation/react-navigation/issues/4196#issuecomment-390827829
+      //     if (Platform.OS === 'ios') {
+      //       console.warn(
+      //         `You should only render one navigator explicitly in your app, and other navigators should by rendered by including them in that navigator. Full details at: ${docsUrl(
+      //           'common-mistakes.html#explicitly-rendering-more-than-one-navigator'
+      //         )}`
+      //       );
+      //     }
+      //   }
+      // }
       _statefulContainerCount++;
       Linking.addEventListener('url', this._handleOpenURL);
 
