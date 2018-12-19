@@ -85,7 +85,9 @@ export default function createNavigationContainer(Component) {
             // dispatch returns true if the action results in a state change,
             // and false otherwise. This maps well to what BackHandler expects
             // from a callback -- true if handled, false if not handled
-            return this.dispatch(NavigationActions.back());
+            
+            // TODO: Edit by zyl
+            // return this.dispatch(NavigationActions.back());
           }
         });
       }
